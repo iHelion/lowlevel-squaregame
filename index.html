@@ -1,0 +1,22 @@
+<html style='height:100%; display:grid; place-items:center'>
+<head>
+    <title>kfadrat</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="720" height="720" style="border:3px solid #000000;"></canvas>
+	
+	<script>
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+		
+		function drawSquareBottom(size) {
+			const margin = 10;
+			const x = (720 - size) / 2;
+			const y = 720 - size - margin;
+			ctx.fillRect(x, y, size, size);
+		}
+		
+		drawSquareBottom(50);
+	</script
+</body>
+</html>
