@@ -8,10 +8,10 @@ export const CANVAS_HEIGHT = 720
 
 // CONTROL /////////////////////////////
 
-export const CONTROL_LEFT = 'a'
-export const CONTROL_RIGHT = 'd'
-export const CONTROL_UP = 'w'
-export const CONTROL_DOWN = 's'
+export const CONTROL_LEFT = 'ArrowLeft'
+export const CONTROL_RIGHT = 'ArrowRight'
+export const CONTROL_UP = 'ArrowUp'
+export const CONTROL_DOWN = 'ArrowDown'
 
 ////////////////////////////////////////
 
@@ -19,6 +19,6 @@ export const CONTROL_DOWN = 's'
 // PLAYER //////////////////////////////
 
 export const PLAYER_SIZE = 50
-export const PLAYER_STEP = 5
+export const PLAYER_STEP = 500
 
 ////////////////////////////////////////

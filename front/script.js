@@ -27,9 +27,12 @@ const control = new Control(player)
 
 // GAME LOOP ///////////////////////////////////////////////////////////////////
 
-function loop(time) {
+let beginFrameTime = + new Date()
 
-    const delta = 1
+function loop(endFrameTime) {
+
+    const delta = (endFrameTime - beginFrameTime) / 1000
+    beginFrameTime = endFrameTime
 
     control.update(delta)
 
