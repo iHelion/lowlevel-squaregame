@@ -1,5 +1,6 @@
-const CANVAS_WIDTH = 720
-const CANVAS_HEIGHT = 720
+// ENVIRONMENT INITIALIZATION //////////////////////////////////////////////////
+
+import { CANVAS_WIDTH, CANVAS_HEIGHT } from './js/settings.js'
 
 
 const canvas = document.getElementById('canvas')
@@ -9,8 +10,37 @@ const ctx = canvas.getContext('2d')
 canvas.width = CANVAS_WIDTH
 canvas.height = CANVAS_HEIGHT
 
+////////////////////////////////////////////////////////////////////////////////
 
-import { addControls } from './js/controls.js'
+
+// GAME INITIALIZATION /////////////////////////////////////////////////////////
+
+import { Control } from './js/control.js'
+import { Player } from './js/player.js'
 
 
-addControls(ctx)
+const player = new Player(ctx)
+const control = new Control(player)
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+// GAME LOOP ///////////////////////////////////////////////////////////////////
+
+function loop(time) {
+
+    const delta = 1
+
+    control.update(delta)
+
+    ctx.reset()
+    player.draw()
+
+    requestAnimationFrame(loop)
+
+}
+
+
+loop()
+
+////////////////////////////////////////////////////////////////////////////////
